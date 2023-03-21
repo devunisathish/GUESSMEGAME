@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>                                                          
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Guess me Game | SATHISH</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <section>
+        <div class="signup-box">
+
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSRjk1z9ZrzEqo9tkqwL8p-ireVU_ID5fC_jLlyKfdBw&s" alt="Code Fed">
+          <label class="title">Guess a number between 1 and 100</label>
+            <div name="suForm" id="supform">
+                <input  type="text" placeholder="Enter Your Guessed Number" id="guess" >
+                
+                <button style="--clr:#33f702" onclick="checkGuess()" ><span>GUESS</span><i></i></button>
+                <p class="result" id="feedback"></p>
+	            <p class="result">Number of guesses: <span id="guesses" class="result"></span></p>
+            </div>
+            </div>
+                             
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

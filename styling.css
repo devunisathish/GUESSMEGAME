@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    background: #00092c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins';
+
+}
+
+section{
+    background: #00092c;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    perspective: 1000px;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    transform: translate(200px,200px);
+   /* background: linear-gradient(80deg,#2192FF,#0043f8);*/
+    background: linear-gradient(80deg,#f4f811,#dcf35b);
+   /* background: linear-gradient(90deg,#ff0000, #Ff5f00); */
+    border-radius: 50%;
+}
+
+section::after{
+    content: '';
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    transform: translate(-200px, -200px);
+    background: linear-gradient(90deg,#ff0000, #Ff5f00);
+   /* background: linear-gradient(80deg,#f4f811,#dcf35b);*/
+    border-radius: 50%;
+    z-index: -1;
+}
+.title{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #e5ff00;
+    font-size: 17px;
+    padding-left: 35px;
+    text-decoration: solid;
+    font-weight: 800;
+}
+.result{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #e5ff00;
+    padding-left: 45px;
+    text-decoration: solid;
+    font-weight: 800;
+    padding-top: 10px;
+}
+
+.signup-box{
+    width: 80%;
+    max-width: 370px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: .75rem;
+    padding: 10px 0;
+    z-index: 1;
+    backdrop-filter: blur(20px);
+    border: 3px solid #b5f309;
+    transition: 0.5s ease;
+}
+
+
+.signup-box img {
+    width: 30%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 50%;
+    border:2px solid #ffc421;
+}
+
+.signup-box img:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+.signup-box input{
+    width: 85%;
+    height: 52px;
+    margin: 12px auto;
+    display: block;
+    border: 1px solid rgba(116, 116, 116, 0.76);
+    border-radius: .75rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    padding-left: 15px;
+    background-color: transparent;
+    border: 2px solid #33f702;
+    color: #e5ff00;
+}
+
+
+
+.signup-box input:focus{
+    outline: none;
+}
+
+
+.label{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding-left: 9px;
+    position: absolute;
+    color: #fff;
+}
+
+button {
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    transition: 0.2s;
+    width: 85%;
+    margin-left: 28px;
+    border-radius: 15px;
+  }
+
+  button:hover {
+    letter-spacing: 0.2rem;
+    padding: 1.1rem 3.1rem;
+    background: var(--clr);
+    color: var(--clr);
+    /* box-shadow: 0 0 35px var(--clr); */
+    animation: box 5s infinite;
+    border-radius: 15px;
+  }
+
+  button::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #272822;
+    border-radius: 15px;
+  }
+
+  button span {
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+  }
+  button i {
+    position: absolute;
+    inset: 0;
+    display: block;
+    border-radius: 15px;
+  }
+  button i::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 80%;
+    top: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+    border-radius: 15px;
+  }
+  
+  button:hover i::before {
+    width: 15px;
+    left: 20%;
+    animation: move 3s infinite;
+    border-radius: 15px;
+  }
+  
+  button i::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 20%;
+    bottom: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+    border-radius: 15px;
+  }
+  
+  button:hover i::after {
+    width: 15px;
+    left: 80%;
+    animation: move 3s infinite;
+    border-radius: 15px;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes box {
+    0% {
+      box-shadow: #27272c;
+    }
+    50% {
+      box-shadow: 0 0 25px var(--clr);
+    }
+    100% {
+      box-shadow: #27272c;
+    }
+  }
